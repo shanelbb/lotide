@@ -26,7 +26,6 @@ const eqArrays = (arr1, arr2) => {
     // if array lengths don't match push false value to isEqual array
     isEqual.push(false);
   }
-  
   return  isEqual.includes(false) ? false : true
 }
 
