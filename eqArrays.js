@@ -26,15 +26,8 @@ const eqArrays = (arr1, arr2) => {
     // if array lengths don't match push false value to isEqual array
     isEqual.push(false);
   }
-
-  // Check if isEqual array contain a false value
-  if (isEqual.includes(false)) {
-    // return False if it does
-    return false
-  } else {
-    // return true if it doesn't
-    return true
-  };
+  
+  return  isEqual.includes(false) ? false : true
 }
 
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // --> Pass: Arrays match length and values 
