@@ -11,7 +11,13 @@ const tail = (arr) => {
   return arrTail;
 };
 
-console.log(tail([1, 2, 3, 4]));
+const result = tail(["Hello", "Lighthouse", "Labs"]);
+assertEqual(result.length, 2);
+assertEqual(result[0], "Lighthouse")
+assertEqual(result[1], "Labs")
+const words = ["Yo", "Yo", "Ma"]
+tail(words)
+assertEqual(words.length, 3)
 
 
 
