@@ -10,7 +10,7 @@ const head = arr => {
   return arr[0];
 };
 
-console.log(head([5, 6, 7], 5));
-console.log(head(['hello', 'world', '!']));
-console.log(head([]));
-console.log(head(['Shanel']))
+assertEqual(head([5, 6, 7], 5), 5);
+assertEqual(head(['hello', 'world', '!']), 'hello');
+assertEqual(head([]), true);
+assertEqual(head(['Shanel']), 'shanel');
