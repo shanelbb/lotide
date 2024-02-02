@@ -33,6 +33,7 @@ const countLetters = (str) => {
 }
 
 const result1 = countLetters("lighthouse in the house")
+console.log(result1)
 
 assertEqual(result1['h'], 4 )
 assertEqual(result1['l'], 1 )
