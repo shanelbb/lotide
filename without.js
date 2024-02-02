@@ -37,15 +37,14 @@ const without = (source, itemsToRemove) => {
       removed.push(item)
     } 
   })
-  return removed
-  }  
-  return ["No items removed"]
+}  
+return removed
 }
 
 assertArraysEqual(without(["1", 2, "3"], [1, 2, 3]), ["1", "3"]);
 assertArraysEqual(without(["1", 2, "3", 4], [1, 2, 3]), ["1", "3", 4]);
-assertArraysEqual(without([1, 2, 3, 4],[1, 2, 3, 4]), ['No items removed'])
+assertArraysEqual(without([1, 2, 3, 4],[1, 2, 3, 4]), [])
 assertArraysEqual(without(["1", "2", 3, 4], [1, 2, "3"]), ["1", "2", 3, 4]);
-assertArraysEqual(without(), ['No items removed']);
+assertArraysEqual(without(), []);
 const words = ["hello", "world", "lighthouse"];
 assertArraysEqual(without(words, ["lighthouse"]), ["hello", "world"]); 
