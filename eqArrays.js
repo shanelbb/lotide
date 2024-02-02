@@ -30,6 +30,6 @@ const eqArrays = (arr1, arr2) => {
 }
 
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // --> Pass: Arrays match length and values 
-assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), true); // --> Fail: Arrays match length but not values
+assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false); // --> Fail: Arrays match length but not values
 assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3", "4"]), true); // --> Fail: Arrays do not match length
 assertEqual(eqArrays(["1", "2", "3"], ["1", 2, "3"]), true); // --> Fail: Array values do not strictly equal
