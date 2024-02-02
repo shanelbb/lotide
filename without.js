@@ -23,9 +23,9 @@ const eqArrays = (arr1 = [], arr2 = []) => {
 
 const assertArraysEqual = (arr1, arr2) => {
   if (eqArrays(arr1, arr2)) {
-    console.log("The arrays are EQUAL 🎉");
+    console.log(`The arrays ${arr1} and ${arr2} are EQUAL 🎉`);
   } else {
-    console.log("The arrays are not equal 😥");
+    console.log(`The arrays ${arr1} and ${arr2} are not equal 😥`);
   }
 };
 
@@ -39,14 +39,13 @@ const without = (source, itemsToRemove) => {
   })
   return removed
   }  
-
-  return "No items removed"
+  return ["No items removed"]
 }
 
-console.log(without(['1', 2, '3'],[1, 2, 3]))
-console.log(without(['1', 2, '3', 4],[1, 2, 3]))
-console.log(without([1, 2, 3, 4],[1, 2, 3, 4]))
-console.log(without(["1", "2", 3, 4], [1, 2, "3"]))
-console.log(without())
+assertArraysEqual(without(["1", 2, "3"], [1, 2, 3]), ["1", "3"]);
+assertArraysEqual(without(["1", 2, "3", 4], [1, 2, 3]), ["1", "3", 4]);
+assertArraysEqual(without([1, 2, 3, 4],[1, 2, 3, 4]), ['No items removed'])
+assertArraysEqual(without(["1", "2", 3, 4], [1, 2, "3"]), ["1", "2", 3, 4]);
+assertArraysEqual(without(), ['No items removed']);
 const words = ["hello", "world", "lighthouse"];
-console.log(without(words, ["lighthouse"])); 
+assertArraysEqual(without(words, ["lighthouse"]), ["hello", "world"]); 
