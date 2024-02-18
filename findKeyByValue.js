@@ -13,15 +13,15 @@ const bestTVShowsByGenre = {
 }
 
 const findKeyByValue = (obj, val) => {
-  for (key in obj) {
+  for (let key in obj) {
     if (obj[key] === val) {
-      return key
+      return key;
     }
   }
-  return
+  return;
 };
 
-assertEqual(findKeyByValue(bestTVShowsByGenre, 'Fringe'), 'sci-fi')
-assertEqual(findKeyByValue(bestTVShowsByGenre, 'The Good Place'), 'comedy')
-assertEqual(findKeyByValue(bestTVShowsByGenre, 'Breaking Bad'), 'drama')
-assertEqual(findKeyByValue(bestTVShowsByGenre, "Friends"), undefined)
+assertEqual(findKeyByValue(bestTVShowsByGenre, 'Fringe'), 'sci-fi');
+assertEqual(findKeyByValue(bestTVShowsByGenre, 'The Good Place'), 'comedy');
+assertEqual(findKeyByValue(bestTVShowsByGenre, 'Breaking Bad'), 'drama');
+assertEqual(findKeyByValue(bestTVShowsByGenre, "Friends"), undefined);
