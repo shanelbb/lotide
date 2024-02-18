@@ -1,3 +1,4 @@
+// This function takes two arrays as arguments and returns true if they are equal and false otherwise.
 const eqArrays = (arr1, arr2) => {
   // Check if length of arrays match
   if (arr1.length === arr2.length) {
