@@ -2,7 +2,7 @@
   "name": "lotide",
   "version": "1.0.0",
   "description": "Function and testing library similar to Lodash",
-  "main": "assertArraysEqual.js",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },

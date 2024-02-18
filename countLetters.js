@@ -1,40 +1,22 @@
-const assertEqual = function (actual, expected) {
-  if (actual === expected) {
-    console.log(`✅ 🥳 Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑 😥 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+const countOnly = require('./countOnly');
 
-const countOnly = (allItems, itemsToCount) => {
-  const results = {};
-  allItems.forEach((item) => {
-    if (itemsToCount[item]) {
-      if (!results[item]) {
-        results[item] = 1;
-      } else {
-        results[item]++;
-      }
-    }
-  });
-  return results;
-};
-
-const countLetters = (str) => {
-  const obj = {}
-  for (el in str) {
-    const letter = str[el]
+// function that uses countOnly to create an object with the occurrences of letters in a string
+const countLetters = (str = '') => {
+  const obj = {};
+  // loop through the string
+  for (let el in str) {
+    // get value of character
+    const letter = str[el];
     if (str[el] !== ' ') {
-      obj[letter] = true
+      // if character is not an empty space add letter to the obj as a key with value of true
+      obj[letter] = true;
     }
   }
-  const strArray = str.split('')
-  return countOnly(strArray, obj)
-}
+  // split the str argument into an array of characters
+  const strArray = str.split('');
+  // countOnly function with strArray and obj variables as the arguments and return result
+  return countOnly(strArray, obj);
+};
 
-const result1 = countLetters("lighthouse in the house")
-console.log(result1)
 
-assertEqual(result1['h'], 4 )
-assertEqual(result1['l'], 1 )
-assertEqual(result1['a'], undefined)
+module.exports = countLetters;

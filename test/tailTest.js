@@ -18,6 +18,10 @@ describe("#tail", () => {
   it("returns [2,3,4,5] for [1,2,3,4,5]", () => {
     assert.deepEqual(tail([1, 2, 3, 4, 5]), [2, 3, 4, 5]);
   });
+  // check the output when an argument other than an array is passed
+  it("returns undefined for a non array argument", () => {
+    assert.deepEqual(tail(true), undefined);
+  });
   // check the output when no array is passed
   it("returns undefined for undefined", () => {
     assert.deepEqual(tail(), undefined);

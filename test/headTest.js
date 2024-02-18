@@ -18,6 +18,10 @@ describe("#head", () => {
   it("returns undefined for []", () => {
     assert.strictEqual(head([]), undefined);
   });
+  // check the input when an non array is passed as the argument
+  it("returns undefined for non array argument", () => {
+    assert.strictEqual(head(), undefined);
+  });
   // check the input when no array is passed
   it("returns undefined for undefined", () => {
     assert.strictEqual(head(), undefined);
